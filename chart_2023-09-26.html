@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ĺšrednia prÄ™dkoĹ›Ä‡ pobierania - 2023-09-26</title>
+<title>Średnia prędkość pobierania - 2023-09-26</title>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
 <body>
-<img src="chart_2023-09-26.png" alt="Ĺšrednia prÄ™dkoĹ›Ä‡ pobierania - 2023-09-26">
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Średnia prędkość pobierania - 2023-09-26'
+    },
+    xAxis: {
+        categories: ['at4','at3','at6','at5','at7','at2','at1'],
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'MB/s'
+        }
+    },
+    series: [{ name: 'at4', data: [49.85] },{ name: 'at3', data: [46.14] },{ name: 'at6', data: [47.12] },{ name: 'at5', data: [46.69] },{ name: 'at7', data: [45.08] },{ name: 'at2', data: [20.59] },{ name: 'at1', data: [19.19] }]
+});
+</script>
 </body>
 </html>
